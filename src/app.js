@@ -7,9 +7,9 @@ class App extends Component {
         super(props);
         this.state = {
             info:[
-                {name:"usman", age:"30", belt:"black", id:1},
-                {name:"Takmeela", age:"30", belt:"yello",  id:2},
-                {name:"Haniya", age:"30", belt:"pink",  id:3}
+                {name:"usman", age:"27", belt:"black", id:1},
+                {name:"Takmeela", age:"26", belt:"yellow",  id:2},
+                {name:"Haniya", age:"2", belt:"pink",  id:3}
             ]
           }
     }
