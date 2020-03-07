@@ -34,6 +34,7 @@ class AddInfo extends Component {
             className="form-control"
             id="name"
             placeholder="Enter your Name"
+            required
           />
         </div>
         <div className="form-group">
@@ -44,6 +45,7 @@ class AddInfo extends Component {
             className="form-control"
             id="age"
             placeholder="Enter your age"
+            required
           />
         </div>
         <div className="form-group">
@@ -54,6 +56,7 @@ class AddInfo extends Component {
             className="form-control"
             id="belt"
             placeholder="Enter your belt type"
+            required
           />
         </div>
         <button  onSubmit={this.handleSubmit} className="btn btn-primary float-left">Submit</button>

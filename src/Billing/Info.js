@@ -1,14 +1,16 @@
-import React, { Component } from "react";
+import React from "react";
 
 const Info = props => {
-  const { infolist } = props;
+  const { infolist, deleteBill } = props;
   const infolistdiv = infolist.map(x => {
-    if (x.age > 20) {
+    if (true) {
       return (
         <tr key={x.id}>
           <td>{x.name}</td>
           <td>{x.age}</td>
           <td>{x.belt}</td>
+          {/* Use Arrow Function Because we Can't Invlode the Method inSide */}
+          <td onClick={() => deleteBill(x.id)} ><button type="button" className="btn btn-outline-danger">Delete</button></td>
         </tr>
       );
     } else {

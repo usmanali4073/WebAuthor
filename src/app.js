@@ -14,23 +14,35 @@ class App extends Component {
     };
   }
 
-  addBill = (bill) => {
-    bill.id = Math.floor(Math.random() * 100); 
+  addBill = bill => {
+    bill.id = Math.floor(Math.random() * 100);
     let billstate = [...this.state.info, bill];
     this.setState({
-        info: billstate
-    })
+      info: billstate
+    });
     console.log(billstate);
-  }
+  };
+
+  deleteBill = (id) => {
+      console.log(id)
+      let billsfilter = this.state.info.filter(x=> x.id !== id);
+      this.setState({
+        info: billsfilter
+      });
+      console.log(billsfilter)
+    };
 
   render() {
     return (
       <div>
         <div className="row">
-          <div className="col-6">
+          <div className="col-5 card  bg-light">
             <AddInfo onNewBill={this.addBill} />
           </div>
-          <div className="col-6">
+          <div className="col-2 card bg-danger">
+
+          </div>
+          <div className="col-5 card  bg-light">
             {/* Billing Info List */}
             <h2>Billing Info</h2>
             <table className="table">
@@ -39,9 +51,10 @@ class App extends Component {
                   <th>Name</th>
                   <th>Age</th>
                   <th>Belt</th>
+                  <th>Action</th>
                 </tr>
               </thead>
-              <Info infolist={this.state.info} />
+              <Info infolist={this.state.info} deleteBill={this.deleteBill} />
             </table>
             {/* Billing Info List */}
           </div>
