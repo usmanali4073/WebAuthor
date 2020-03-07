@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import PropTypes from 'prop-types'
 
 class Info extends Component {
   constructor(props) {
@@ -7,18 +6,22 @@ class Info extends Component {
     this.state = {};
   }
 
-
-
   render() {
-     const  {name, age, belt} = this.props
+    const { infolist } = this.props;
+    const infolistdiv = infolist.map(x => {
+      return (
+        <div key={x.id}>
+          <h1>My Billing Info </h1>
+          <div>NAME: {x.name} </div>
+          <div>AGE: {x.age} </div>
+          <div>BELT: {x.belt} </div>
+        </div>
+      );
+    });
 
+    console.log(infolistdiv)
     return (
-      <div>
-        <h1>My Billing Info </h1>
-        <div>Name: {name} </div>
-        <div>Age: {age} </div>
-        <div>Belt: {belt} </div>
-      </div>
+        <div> { infolistdiv }</div>
     );
   }
 }
