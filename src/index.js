@@ -6,8 +6,7 @@ import Account from './Account/Account'
 import DomEvents from './DOMEvents/DomEvents';
 import Info from './Account/Info';
 import App from './app';
-
-
+import './bootstrap.min.css'
 ReactDOM.render(<App/>, document.getElementById('root'))
 
 
