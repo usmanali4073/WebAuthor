@@ -5,9 +5,13 @@ import * as serviceWorker from './serviceWorker';
 import Account from './Account/Account'
 import DomEvents from './DOMEvents/DomEvents';
 import Info from './Account/Info';
+import App from './app';
 
-ReactDOM.render(<Info/>, document.getElementById('root'))
 
+ReactDOM.render(<App/>, document.getElementById('root'))
+
+
+// ReactDOM.render(<Info/>, document.getElementById('root'))
 // ReactDOM.render(<Account/>, document.getElementById('root'));
 // ReactDOM.render(<DomEvents />, document.getElementById('domEvent') )
 // If you want your app to work offline and load faster, you can change
