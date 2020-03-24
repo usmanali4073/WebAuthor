@@ -1,11 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import * as serviceWorker from './serviceWorker';
-import App from './app';
-import './bootstrap.min.css'
-ReactDOM.render(<App/>, document.getElementById('root'))
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import * as serviceWorker from "./serviceWorker";
+import App from "./app";
+import "./bootstrap.min.css";
+import Account from "./AccountInfo/Account";
 
+import { BrowserRouter, Route } from "react-router-dom";
+import Add from "./AccountInfo/Add";
+
+
+ReactDOM.render(
+  <BrowserRouter>
+  <React.Fragment>
+    <Route exact path="/" component={App} />
+    <Route path="/add" component={Add}/>
+    </React.Fragment>
+  </BrowserRouter>,
+  document.getElementById("root")
+);
+
+ReactDOM.render(
+  <BrowserRouter>
+    <Route exact path="/account" component={Account} />
+  </BrowserRouter>,
+  document.getElementById("root-form")
+);
 
 // ReactDOM.render(<Info/>, document.getElementById('root'))
 // ReactDOM.render(<Account/>, document.getElementById('root'));

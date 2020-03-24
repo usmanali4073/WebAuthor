@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Info from "./Billing/Info";
 import AddInfo from "./Billing/AddInfo";
+import { Link } from "react-router-dom";
 
 class App extends Component {
   constructor(props) {
@@ -39,8 +40,8 @@ class App extends Component {
           <div className="col-5 card  bg-light">
             <AddInfo onNewBill={this.addBill} />
           </div>
-          <div className="col-2 card bg-danger">
-
+          <div className="col-2 ">
+          <Link className="btn btn-danger" to="/add">Add An Author</Link>
           </div>
           <div className="col-5 card  bg-light">
             {/* Billing Info List */}
